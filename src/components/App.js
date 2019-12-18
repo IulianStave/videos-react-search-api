@@ -24,7 +24,7 @@ class App extends React.Component {
       <div className="ui container">
         <h1> Videos App </h1> 
         <SearchBar onFormSubmit={this.onTermSubmit}/>
-        <VideoList source={this.dataSource.text}/>
+        <VideoList videos={this.state.videos} source={this.dataSource.text}/>
         I have {this.state.videos.length} videos.
     </div>
     );
