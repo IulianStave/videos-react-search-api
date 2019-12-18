@@ -4,7 +4,7 @@ import VideoItem from './VideoItem';
 const VideoList = ({videos, source }) => {
   // props.videos
   const renderedList = videos.map((video) => {
-    return <VideoItem/>;
+    return <VideoItem video={video}/>;
   });
   return (
     <div className="ui segment">
