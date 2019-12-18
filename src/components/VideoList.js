@@ -1,23 +1,12 @@
 import React from 'react';
 
-// class VideoList extends React.Component {
+const VideoList = props => {
 
-//   render() {
-//     return (
-//     <div className='ui segment'>
-//       {}
-//       Rendering videos from {this.props.source} 
-//     </div>
-//     );
-//   }
-
-// }
-
-const VideoList = props =>{
   return (
-    <div className='ui container'>
+    <div className="ui segment">
       Rendering videos from {props.source} 
     </div>
   )
 }
+
 export default VideoList;
