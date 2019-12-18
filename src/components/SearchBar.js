@@ -9,6 +9,8 @@ onInputChange = (event) => {
 
 onFormSubmit = (event) => {
   event.preventDefault();
+  // callback from parent component App
+  this.props.onFormSubmit(this.state.term);
   
 };
   
