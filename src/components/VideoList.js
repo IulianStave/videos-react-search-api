@@ -1,13 +1,13 @@
 import React from 'react';
 
-const VideoList = props => {
+const VideoList = ({videos, source }) => {
 // props.videos
   return (
     <div className="ui segment">
-      Rendering videos from {props.source}:
-      {props.videos.length} 
+      Rendering videos from {source}:
+      {videos.length} 
     </div>
-  )
+  );
 }
 
 export default VideoList;
