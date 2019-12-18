@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className='ui container'>
         <h1> Videos App </h1> 
-        <h3> <VideoList/> </h3>
+        <h3> <VideoList source='Youtube'/> </h3>
     </div>
     );
   }
