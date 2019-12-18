@@ -1,11 +1,16 @@
 import React from 'react';
+import VideoItem from './VideoItem';
 
 const VideoList = ({videos, source }) => {
-// props.videos
+  // props.videos
+  const renderedList = videos.map((video) => {
+    return <VideoItem/>;
+  });
   return (
     <div className="ui segment">
       Rendering videos from {source}:
       {videos.length} 
+      {renderedList}
     </div>
   );
 }
