@@ -4,8 +4,16 @@ import SearchBar from './SearchBar';
 import VideoDetail from './VideoDetail';
 import youtube, { baseParams } from '../api/youtube';
 
+const defaultTerm ='react applications';
+
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
+
+  // add a default search when application first loads
+  componentDidMount() {
+    this.onTermSubmit(defaultTerm);
+  }
+
   onTermSubmit = async searchTerm  => {
     // console.log(term);
     const response = await youtube.get('/search', {
