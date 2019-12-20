@@ -14,7 +14,10 @@ class App extends React.Component {
         q: searchTerm
       }
     });
-    this.setState({videos: response.data.items, val:'Demo prop changed through setState'});
+    this.setState({
+      videos: response.data.items,
+      selectedVideo:response.data.items[0]
+    });
   };
 
   onVideoSelect = (video) => {
