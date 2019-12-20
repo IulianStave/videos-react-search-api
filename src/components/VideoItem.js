@@ -1,10 +1,17 @@
 import './VideoItem.css';
 import React from 'react';
 
+// communicate from child component to parent App through
+// callback method onVideoSelect to get SelectedVideo
+
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
     <div onClick ={() => onVideoSelect(video)} className="video-item item">
-      <img clasName="ui image" src={ video.snippet.thumbnails.medium.url }/>
+      <img 
+        className="ui image" 
+        src={ video.snippet.thumbnails.medium.url }
+        alt={ video.snippet.title }
+      />
       <div className="content">
         <div className="header">
           { video.snippet.title }
