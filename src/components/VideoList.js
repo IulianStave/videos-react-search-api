@@ -7,10 +7,9 @@ const VideoList = ({videos, source }) => {
     return <VideoItem video={video}/>;
   });
   return (
-    <div className="ui segment">
+    <div className="ui relaxed divided list">
       Rendering videos from {source}:
-      {videos.length} 
-      {renderedList}
+       {renderedList}
     </div>
   );
 }
