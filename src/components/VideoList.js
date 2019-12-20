@@ -14,7 +14,7 @@ const VideoList = ({videos, onVideoSelect, source }) => {
   });
   return (
     <div className="ui relaxed divided list">
-      Rendering videos from {source}:
+      {source} videos:
        {renderedList}
     </div>
   );

@@ -29,13 +29,22 @@ class App extends React.Component {
       <div className="ui container">
         <h1> Videos App </h1> 
         <SearchBar whenSubmitted={this.onTermSubmit} />
-        <VideoDetail video={this.state.selectedVideo}/>
-        <VideoList
-          onVideoSelect={this.onVideoSelect} 
-          videos={this.state.videos} 
-          source={this.dataSource.text}
-        />
-        I have {this.state.videos.length} videos.
+       
+      <div className="ui grid">
+         <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo}/>
+            </div>
+            <div className="five wide column">
+              <VideoList
+                onVideoSelect={this.onVideoSelect} 
+                videos={this.state.videos} 
+                source={this.dataSource.text}
+              />
+            </div>
+         </div>
+      </div>
+      
     </div>
     );
   }
