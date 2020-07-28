@@ -1,4 +1,5 @@
 import React from 'react';
+import {htmlDecode} from './VideoItem';
 
 const VideoDetail = ({video}) => {
   // instead of 
@@ -19,8 +20,8 @@ const VideoDetail = ({video}) => {
         />
       </div>
       <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+        <h4 className="ui header">{htmlDecode(video.snippet.title)}</h4>
+        <p> {htmlDecode(video.snippet.description)}</p>
       </div>
     </div>
   );

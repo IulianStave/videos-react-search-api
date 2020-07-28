@@ -3,8 +3,14 @@ import React from 'react';
 
 // communicate from child component to parent App through
 // callback method onVideoSelect to get SelectedVideo
+export const htmlDecode =(input)=> {
+  var doc = new DOMParser().parseFromString(input, "text/html");
+  return doc.documentElement.textContent;
+};
 
 const VideoItem = ({ video, onVideoSelect }) => {
+
+
   return (
     <div onClick ={() => onVideoSelect(video)} className="video-item item">
       <img 
@@ -14,7 +20,7 @@ const VideoItem = ({ video, onVideoSelect }) => {
       />
       <div className="content">
         <div className="header">
-          { video.snippet.title }
+          {htmlDecode(video.snippet.title)}
         </div>
       </div>
     </div>
